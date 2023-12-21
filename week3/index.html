@@ -1,15 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+ 
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ace Mones - Portfolio</title>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ace Mones - Portfolio </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+ 
+        header {
+            background-color: #ffd1dc;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+ 
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+ 
+        .profile {
+            float: left;
+            width: 30%;
+            margin: 20px;
+        }
+ 
+        .profile img {
+            width: 100%;
+            border-radius: 50%;
+        }
+ 
+        .profile h2 {
+            margin-top: 10px;
+            text-align: center;
+        }
+ 
+        .profile p {
+            text-align: center;
+        }
+ 
+        .portfolio {
+            float: left;
+            width: 60%;
+            margin: 20px;
+        }
+ 
+        .portfolio img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+ 
+        footer {
+            background-color: #ffd1dc;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+		
+		.social-icons{
+			text-align: center;
+			margin-top: 20px;
+			display: inline-block;
+			margin: 0 10px;
+			color: #333
+			font-size: 20px;
+			transition: color 0.3s;
+		}
+    </style>
 </head>
-<body
-	<div class="container"
-		<div class="profile-box">
-			<img src="images/hbmones." class="behance-icon">
-	</div>
-
+ 
+<body>
+ 
+    <header>
+        <h1>Profile Portfolio</h1>
+    </header>
+ 
+    <div class="container">
+        <div class="profile">
+            <img src="hbmones.png" alt="Profile Picture">
+            <h2>Hazel Ann Mones</h2>
+            <p>CS Student at Asia Pacific College<br>Aspiring UI/UX Designer</p>
+        </div>
+		
+		<div class="contact">
+            <h2>Contact Me</h2>
+            <a href="https://www.behance.net/hazelmones/projects" target="_blank">
+				<img src="behance.png" />
+			</a>
+			<br>
+			<a href="https://www.linkedin.com/in/hazel-ann-mones-76291a248/" target="_blank">
+				<img src="linkedin.png" />
+			</a>
+			<br>
+			<a href="https://www.facebook.com/hazelannbm" target="_blank">
+				<img src="facebook.png" />
+			</a>
+			<br>
+			<a href="https://www.instagram.com/harflms/" target="_blank">
+				<img src="instagram.png" />
+			</a>
+        </div>
+ 
+		<div class="social-icons">
+			<a href="https://www.behance.net/hazelmones/projects" target="_blank"><i class="fab fa-behance-square></i></a>
+			<a href="https://www.linkedin.com/in/hazel-ann-mones-76291a248/" target="_blank"><i class="fab fa-linkedin-square></i></a>
+			<a href="https://www.facebook.com/hazelannbm" target="_blank"><i class="fab fa-facebook-square></i></a>
+			<a href="https://www.instagram.com/harflms/" target="_blank"><i class="fab fa-instagram-square></i></a>
+		</div>
+		
+    </div>
+ 
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+ 
 </body>
+ 
 </html>
