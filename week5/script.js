@@ -18,4 +18,15 @@ document.getElementById("contactLink").addEventListener("click", showNotFunction
 
 function myFunction() {
     alert("Not functional yet.")
-}    
+}
+
+function myFunction2() {
+    alert("You are viewing my webpage.")
+}
+
+function myFunction3() {
+    alert("Good day.")
+}
+
+myFunction3();
+myFunction2();
