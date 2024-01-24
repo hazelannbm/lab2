@@ -17,4 +17,5 @@ document.getElementById("portfolioLink").addEventListener("click", showNotFuncti
 document.getElementById("contactLink").addEventListener("click", showNotFunctionalDialog);
 
 function myFunction() {
-}
+    alert("Not functional yet.")
+}    
