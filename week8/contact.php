@@ -3,7 +3,8 @@
 <body>
 
 <?php
-echo "<h1>SKILLS</h1>"
+$x = "Contact";
+echo "<h1>My $x</h1>";
 ?>
 
 </body>

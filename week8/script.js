@@ -13,7 +13,6 @@ function showNotFunctionalDialog() {
 }
 
 document.getElementById("portfolioLink").addEventListener("click", showNotFunctionalDialog);
-document.getElementById("contactLink").addEventListener("click", showNotFunctionalDialog);
 
 function myFunction() {
     alert("Not functional yet.")
