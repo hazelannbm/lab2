@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Simple PHP Form Validation</title>
+<title>Ace Mones - Personal Portfolio</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -19,7 +19,7 @@
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    input[type="text"], input[type="email"], input[type="submit"] {
+    input[type="text"], input[type="email"], input[type="submit"], select, textarea {
         width: 100%;
         padding: 10px;
         margin: 5px 0;
@@ -43,17 +43,27 @@
 </head>
 <body>
 <div class="container">
-    <h2>Simple PHP Form Validation</h2>
+    <h2>Contact me!</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website">
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea>
         <input type="submit" name="submit" value="Submit">
     </form>
 
     <?php
-    $name = $email = "";
+    $name = $email = $gender = $website = $comment = "";
     $nameErr = $emailErr = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -61,7 +71,7 @@
             $nameErr = "Name is required";
         } else {
             $name = test_input($_POST["name"]);
-            if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+            if (!preg_match("/^[a-zA-Z ]*$/", $name)) {
                 $nameErr = "Only letters and white space allowed";
             }
         }
@@ -74,9 +84,15 @@
                 $emailErr = "Invalid email format";
             }
         }
+
+        // Check if the keys are set before accessing them
+        $gender = isset($_POST["gender"]) ? test_input($_POST["gender"]) : "";
+        $website = isset($_POST["website"]) ? test_input($_POST["website"]) : "";
+        $comment = isset($_POST["comment"]) ? test_input($_POST["comment"]) : "";
     }
 
-    function test_input($data) {
+    function test_input($data)
+    {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
@@ -89,6 +105,9 @@
             <h2>Form submitted successfully!</h2>
             <p>Name: <?php echo $name; ?></p>
             <p>Email: <?php echo $email; ?></p>
+            <p>Gender: <?php echo $gender; ?></p>
+            <p>Website: <?php echo $website; ?></p>
+            <p>Comment: <?php echo $comment; ?></p>
         </div>
     <?php endif; ?>
 
