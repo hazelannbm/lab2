@@ -88,5 +88,30 @@ echo "<br>";
 echo $gender;
 ?>
 
+<?php
+$servername = "localhost";
+$username = "webprogss221";
+$password = "d=latHen97";
+$dbname = "webprogss221";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "INSERT INTO hbmones_myguests (firstname, lastname, email)
+VALUES ('$name', '$website', '$email')";
+
+if ($conn->query($sql) === TRUE) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+$conn->close();
+?>
+
 </body>
 </html>
