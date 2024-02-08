@@ -91,7 +91,7 @@ echo $gender;
 <?php
 $servername = "localhost";
 $username = "webprogss221";
-$password = "d=latHen97";
+$password = "=latHen97";
 $dbname = "webprogss221";
 
 // Create connection
